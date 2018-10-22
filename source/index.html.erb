@@ -6,9 +6,9 @@ title: Le Wagon - Middleman
 
 <div class="container">
   <div class="row">
-    <% 9.times do %>
+    <% data.flats.each do |flat| %>
       <div class="col-xs-12 col-sm-4">
-        <%= partial "layouts/card" %>
+        <%= partial "layouts/card", :locals => { flat: flat } %>
       </div>
     <% end %>
   </div>
